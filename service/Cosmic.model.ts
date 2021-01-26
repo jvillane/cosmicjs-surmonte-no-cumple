@@ -32,22 +32,26 @@ export interface CosmicObject<Props> {
 }
 
 export interface CosmicImage {
-  imgix_url: string | null
-  url: string | null
+  imgix_url: string
+  url: string
+}
+
+export interface AuthorProps {
+  location: string
+}
+
+export interface Author extends CosmicObject<AuthorProps> {
+  type_slug: 'authors'
 }
 
 export interface PhraseProps {
-  author: {
-    content: string
-    slug: string
-    title: string
-    type_slug: "authors"
-  }
-  image_1: CosmicImage
-  image_2: CosmicImage
-  image_3: CosmicImage
+  author: Author
+  images: {
+    image: CosmicImage
+  }[]
 }
 
 export interface Phrase extends CosmicObject<PhraseProps> {
-
+  type_slug: 'phrases'
 }
+
