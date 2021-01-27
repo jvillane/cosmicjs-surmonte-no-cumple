@@ -3,7 +3,7 @@ import { AppProps } from 'next/app'
 import '../styles/globals.css';
 import { GTMPageView } from "../service/gtm";
 import { Router } from "next/router";
-import { Head } from "next/document";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
