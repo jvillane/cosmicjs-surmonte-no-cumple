@@ -1,27 +1,19 @@
-import type { AppProps } from 'next/app'
-import TagManager from 'react-gtm-module'
+import React, { useEffect } from "react";
+import { AppProps } from 'next/app'
 import '../styles/globals.css';
-import Head from "next/head";
+import { GTMPageView } from "../service/gtm";
+import { Router } from "next/router";
 
-export default function MyApp({ Component, pageProps }: AppProps) {
-  if (process.env.NODE_ENV === "production") {
-    TagManager.initialize({gtmId: 'G-QSX9LNK1C4'})
-  }
-  return (
-    <>
-      <Head>
-        <title>Inmobiliaria Surmonte | conozca la verdadera calidad del servicio a través de la experiencia de sus
-          clientes</title>
-        <meta name="description" content="Servicio de la Inmobiliaria Surmonte al desnudo"/>
-        <meta name="keywords"
-              content="condell54, echeñique46, hl23, candil35, thayer14, ferrer24, lf35, ey32, hda24, wa78, san luis6, capitanes evolución, amudsen evolución, el roble mirador, pocuro miradorpocuro evolución"/>
-        <meta name="author" content="nocumple.cl"/>
-        <meta name="copyright" content="nocumple.cl"/>
-        <meta httpEquiv="cache-control" content="no-cache"/>
-      </Head>
-      <Component {...pageProps} />
-    </>
-  );
+export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    const handleRouteChange = (url: string) => GTMPageView(url);
+    Router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      Router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, []);
+  
+  return <Component {...pageProps}/>
 }
 
 // Only uncomment this method if you have blocking data requirements for

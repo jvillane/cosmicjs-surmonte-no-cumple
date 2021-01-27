@@ -1,18 +1,10 @@
 import { Phrase } from "../service/Cosmic.model";
-import { CosmicService } from "../service/Cosmic.service";
-import { useEffect, useState } from "react";
 
-export default function Phrases() {
-  
-  const [phrases, setPhrases] = useState<Phrase[]>();
-  
-  useEffect(() => {
-    CosmicService.getObjects<Phrase>({ type: 'phrases' })
-      .then((phrases) => {
-        //console.log('phrases', phrases);
-        setPhrases(phrases);
-      });
-  }, [])
+interface Props {
+  phrases?: Phrase[]
+}
+
+export default function Phrases({phrases}: Props) {
   
   return (
     <>
@@ -26,15 +18,17 @@ export default function Phrases() {
               Las vivencias de sus clientes
             </h2>
             <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-              Conozca desde sus propias palabras... lo que ha significado vivir la <b className="text-indigo-700">Experiencia Surmonte</b>
+              Conozca desde sus propias palabras... lo que ha significado vivir la <b className="text-indigo-700">Experiencia
+              Surmonte</b>
             </p>
           </div>
           <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-            {!phrases && <>Cargando...</>}
+            {!phrases && <>Error al obtener las phrases...</>}
             {phrases && phrases.map(phrase => (
               <div className="flex flex-col rounded-lg shadow-lg overflow-hidden" key={phrase._id}>
                 <div className="flex-shrink-0">
-                  <img className="h-48 w-full object-cover" src={phrase.metadata.images[0].image.url} alt={phrase.title}/>
+                  <img className="h-48 w-full object-cover" src={phrase.metadata.images[0].image.url}
+                       alt={phrase.title}/>
                 </div>
                 <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                   <div className="flex-1">
@@ -53,7 +47,8 @@ export default function Phrases() {
                     <div>
                       <p className="text-sm font-medium text-gray-900">
                           <span className="hover:underline">
-                            {phrase.metadata.author.title} - <span className="text-indigo-500">{phrase.metadata.author.metadata.location}</span>
+                            {phrase.metadata.author.title} - <span
+                            className="text-indigo-500">{phrase.metadata.author.metadata.location}</span>
                           </span>
                       </p>
                     </div>
