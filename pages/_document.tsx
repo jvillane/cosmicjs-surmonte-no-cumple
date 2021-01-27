@@ -1,4 +1,4 @@
-import Document, { DocumentContext, Head, Html } from "next/document";
+import Document, { DocumentContext, Head, Html, Main, NextScript } from "next/document";
 
 export default class MyDocument extends Document {
   
@@ -13,8 +13,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="es-CL">
         <Head>
-          <title>Inmobiliaria Surmonte | conozca la verdadera calidad del servicio a través de la experiencia de sus
-            clientes</title>
           <meta charSet='utf-8'/>
           <meta name="description" content="Servicio de la Inmobiliaria Surmonte al desnudo"/>
           <meta name="keywords"
@@ -22,7 +20,6 @@ export default class MyDocument extends Document {
           <meta name="author" content="nocumple.cl"/>
           <meta name="copyright" content="nocumple.cl"/>
           <meta httpEquiv="cache-control" content="no-cache"/>
-          
           <script
             dangerouslySetInnerHTML={{
               __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -38,6 +35,10 @@ export default class MyDocument extends Document {
             }}
           />
         </Head>
+        <body>
+          <Main/>
+          <NextScript/>
+        </body>
       </Html>
     );
   }

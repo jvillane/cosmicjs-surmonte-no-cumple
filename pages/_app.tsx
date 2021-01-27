@@ -3,6 +3,7 @@ import { AppProps } from 'next/app'
 import '../styles/globals.css';
 import { GTMPageView } from "../service/gtm";
 import { Router } from "next/router";
+import { Head } from "next/document";
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -13,7 +14,15 @@ export default function App({ Component, pageProps }: AppProps) {
     };
   }, []);
   
-  return <Component {...pageProps}/>
+  return (
+    <>
+      <Head>
+        <title>Inmobiliaria Surmonte | conozca la verdadera calidad del servicio a través de la experiencia de sus
+          clientes</title>
+      </Head>
+      <Component {...pageProps}/>
+    </>
+  );
 }
 
 // Only uncomment this method if you have blocking data requirements for
