@@ -5,7 +5,7 @@ interface Props {
 }
 
 export default function Phrases({phrases}: Props) {
-  
+  console.log('phrases', phrases)
   return (
     <>
       <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
@@ -36,7 +36,7 @@ export default function Phrases({phrases}: Props) {
                       <p className="text-xl font-semibold text-indigo-600">
                         {phrase.title}
                       </p>
-                      <p className="mt-3 text-base phrase-content-gradient max-h-52 overflow-hidden"
+                      <div className="mt-3 text-base phrase-content-gradient max-h-52 overflow-hidden"
                          dangerouslySetInnerHTML={{ __html: phrase.content }}/>
                     </a>
                   </div>

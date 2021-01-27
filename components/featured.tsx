@@ -1,10 +1,10 @@
 export default function Featured() {
   return (
-    <section className="py-12 bg-indigo-700 overflow-hidden md:py-20 lg:py-24">
+    <section className="py-8 bg-indigo-700 overflow-hidden md:py-12 lg:py-20">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative">
           <blockquote className="mt-10">
-            <div className="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-white">
+            <div className="max-w-3xl mx-auto text-center text-3xl leading-9 font-medium text-white">
               <p>
                 &ldquo;Si pudiera retroceder el tiempo no me dejaría llevar por el diseño del edificio, y elegiría no
                 hacer la inversión con Surmonte. Sus jefaturas simplemente no responden y el supervisor de postventa
