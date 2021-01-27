@@ -39,6 +39,7 @@ jobs:
           export "COSMIC_BUCKET=${{ secrets.COSMIC_BUCKET }}"
           sed "s/:COSMIC_READ_KEY/${COSMIC_READ_KEY}/g; s/:COSMIC_BUCKET/${COSMIC_BUCKET}/g;" .env.template > .env
           npm install
+          node scripts/sitemap-common.js
           npm run build
       - name: Init Sam Cli
         uses: tkt-actions/aws-sam-cli@v1
