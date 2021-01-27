@@ -1,9 +1,12 @@
 import type { AppProps } from 'next/app'
+import TagManager from 'react-gtm-module'
 import '../styles/globals.css';
 import Head from "next/head";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  const isProduction = process.env.NODE_ENV === "production";
+  if (process.env.NODE_ENV === "production") {
+    TagManager.initialize({gtmId: 'G-QSX9LNK1C4'})
+  }
   return (
     <>
       <Head>
@@ -15,18 +18,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <meta name="author" content="nocumple.cl"/>
         <meta name="copyright" content="nocumple.cl"/>
         <meta httpEquiv="cache-control" content="no-cache"/>
-        {isProduction && (
-          <>
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSX9LNK1C4"/>
-            <script>
-              window.dataLayer = window.dataLayer || [];
-              function gtag() {dataLayer.push(arguments);}
-              gtag('js', new Date());
-              
-              gtag('config', 'G-QSX9LNK1C4');
-            </script>
-          </>
-        )}
       </Head>
       <Component {...pageProps} />
     </>

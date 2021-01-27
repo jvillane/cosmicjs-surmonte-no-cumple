@@ -15,4 +15,10 @@ module.exports = {
   images: {
     domains: ['cdn.cosmicjs.com'],
   },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      require('./scripts/generateSiteMap')
+    }
+    return config
+  }
 };
