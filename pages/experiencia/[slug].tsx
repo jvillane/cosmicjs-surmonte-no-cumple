@@ -1,28 +1,31 @@
 import { GetStaticProps, NextPage } from "next";
+import ErrorPage from 'next/error'
 import { CosmicService } from "../../service/Cosmic.service";
 import { Experience } from "../../service/Cosmic.model";
 
 export const getStaticPaths = async () => {
   const experiences = await CosmicService.getObjects<{ slug: string }>({ type: 'experiences', props: 'slug' });
   return {
-    paths: experiences.map(exp => {
-      return { params: exp }
-    }),
-    fallback: true
+    paths: experiences.map(e => `/experiencia/${e.slug}`),
+    fallback: false
   }
 }
 
 export const getStaticProps: GetStaticProps<{ experience?: Experience }, { slug: string }> = async ({ params }) => {
+  console.log('params', params);
   try {
     const experience = await CosmicService.getObject<Experience>(params?.slug);
-    return {
-      props: { experience }
+    if(experience) {
+      return {
+        props: { experience }
+      };
     }
   } catch (err) {
-    return {
-      notFound: true
-    }
+    console.error('error', err);
   }
+  return {
+    notFound: true
+  };
 }
 
 interface Props {
@@ -30,6 +33,9 @@ interface Props {
 }
 
 const ExperienceDetails: NextPage<Props> = ({ experience }) => {
+  if(!experience) {
+    return <ErrorPage statusCode={404} />;
+  }
   return (
     <div className="pb-20">
       <div className="relative bg-white py-16 sm:py-24 lg:py-32">

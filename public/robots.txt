@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://surmonte.nocumple.cl
+
+# Sitemaps
+Sitemap: https://surmonte.nocumple.cl/sitemap.xml
