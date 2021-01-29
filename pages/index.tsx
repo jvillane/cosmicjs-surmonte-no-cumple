@@ -4,6 +4,7 @@ import Experiences from "../components/experiences";
 import { Experience } from "../service/Cosmic.model";
 import { CosmicService } from "../service/Cosmic.service";
 import { GetStaticProps, NextPage } from "next";
+import GetInTouch from "../components/getintouch";
 
 interface Props {
   experiences?: Experience[]
@@ -30,6 +31,7 @@ const Index: NextPage<Props> = ({experiences}) => {
           <TopBar/>
           <Featured/>
           <Experiences experiences={experiences}/>
+          <GetInTouch/>
         </div>
       </div>
     </div>

@@ -30,7 +30,6 @@ interface Props {
 }
 
 const ExperienceDetails: NextPage<Props> = ({ experience }) => {
-  console.log('experience', experience)
   return (
     <div className="pb-20">
       <div className="relative bg-white py-16 sm:py-24 lg:py-32">
