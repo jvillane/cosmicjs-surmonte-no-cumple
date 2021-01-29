@@ -31,7 +31,8 @@ export namespace CosmicService {
     read_key: process.env.NEXT_PUBLIC_COSMIC_READ_KEY,
   });
 
-  export const getObject = async <E> (slug: string) => {
+  export const getObject = async <E> (slug?: string) => {
+    if(!slug) return undefined;
     try {
       const response = await bucket.getObject({ slug });
       return (response.object as E);

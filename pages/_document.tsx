@@ -1,4 +1,6 @@
 import Document, { DocumentContext, Head, Html, Main, NextScript } from "next/document";
+import TopBar from "../components/topbar";
+import Footer from "../components/footer";
 
 export default class MyDocument extends Document {
   
@@ -38,6 +40,7 @@ export default class MyDocument extends Document {
         <body>
           <Main/>
           <NextScript/>
+          <Footer/>
         </body>
       </Html>
     );

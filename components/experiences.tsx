@@ -24,33 +24,33 @@ export default function Experiences({experiences}: Props) {
           </div>
           <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
             {!experiences && <>Error al obtener las phrases...</>}
-            {experiences && experiences.map(phrase => (
-              <div className="flex flex-col rounded-lg shadow-lg overflow-hidden" key={phrase._id}>
+            {experiences && experiences.map(experience => (
+              <div className="flex flex-col rounded-lg shadow-lg overflow-hidden" key={experience._id}>
                 <div className="flex-shrink-0">
-                  <img className="h-48 w-full object-cover" src={phrase.metadata.images[0].image.url}
-                       alt={phrase.title}/>
+                  <img className="h-48 w-full object-cover" src={experience.metadata.images[0].image.url}
+                       alt={experience.title}/>
                 </div>
                 <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                   <div className="flex-1">
-                    <div className="block mt-2">
-                      <Link href={`/experiencia/${phrase.slug}`}>
-                        <p className="text-xl font-semibold text-indigo-600">
-                          {phrase.title}
-                        </p>
-                      </Link>
+                    <Link href={`/experiencia/${experience.slug}`} passHref>
+                    <a href="#" className="block mt-2">
+                      <p className="text-xl font-semibold text-indigo-600">
+                        {experience.title}
+                      </p>
                       <div className="mt-3 text-base phrase-content-gradient max-h-52 overflow-hidden"
-                           dangerouslySetInnerHTML={{ __html: phrase.content }}/>
-                    </div>
+                           dangerouslySetInnerHTML={{ __html: experience.content }}/>
+                    </a>
+                    </Link>
                   </div>
                   <div className="mt-6 flex items-center">
                     <div className="flex-shrink-0">
-                      <span className="sr-only">{phrase.metadata.author.title}</span>
+                      <span className="sr-only">{experience.metadata.author.title}</span>
                     </div>
                     <div>
                       <p className="text-sm font-medium text-gray-900">
                           <span className="hover:underline">
-                            {phrase.metadata.author.title} - <span
-                            className="text-indigo-500">{phrase.metadata.author.metadata.location}</span>
+                            {experience.metadata.author.title} - <span
+                            className="text-indigo-500">{experience.metadata.author.metadata.location}</span>
                           </span>
                       </p>
                     </div>

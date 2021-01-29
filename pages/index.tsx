@@ -1,7 +1,6 @@
 import Featured from "../components/featured";
 import TopBar from "../components/topbar";
 import Experiences from "../components/experiences";
-import Footer from "../components/footer";
 import { Experience } from "../service/Cosmic.model";
 import { CosmicService } from "../service/Cosmic.service";
 import { GetStaticProps, NextPage } from "next";
@@ -23,7 +22,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   }
 }
 
-const Index: NextPage<Props> = ({experiences}: Props) => {
+const Index: NextPage<Props> = ({experiences}) => {
   return (
     <div className="app">
       <div className="lg:flex lg:items-center lg:justify-between">
@@ -31,7 +30,6 @@ const Index: NextPage<Props> = ({experiences}: Props) => {
           <TopBar/>
           <Featured/>
           <Experiences experiences={experiences}/>
-          <Footer/>
         </div>
       </div>
     </div>
