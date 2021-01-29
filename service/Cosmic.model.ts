@@ -44,14 +44,14 @@ export interface Author extends CosmicObject<AuthorProps> {
   type_slug: 'authors'
 }
 
-export interface PhraseProps {
+export interface ExperienceProps {
   author: Author
   images: {
     image: CosmicImage
   }[]
 }
 
-export interface Phrase extends CosmicObject<PhraseProps> {
+export interface Experience extends CosmicObject<ExperienceProps> {
   type_slug: 'phrases'
 }
 

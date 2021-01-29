@@ -6,6 +6,16 @@
 >
   <url>
     <loc>https://surmonte.nocumple.cl/</loc>
-    <lastmod>2021-01-27T23:18:54.168Z</lastmod>
+    <lastmod>2021-01-29T02:42:19.858Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://surmonte.nocumple.cl/frase/[slug]</loc>
+    <lastmod>2021-01-29T02:42:19.858Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://surmonte.nocumple.cl/experiencia/[slug]</loc>
+    <lastmod>2021-01-29T02:42:19.858Z</lastmod>
   </url>
 </urlset>

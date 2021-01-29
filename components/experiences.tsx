@@ -1,10 +1,11 @@
-import { Phrase } from "../service/Cosmic.model";
+import { Experience } from "../service/Cosmic.model";
+import Link from "next/link";
 
 interface Props {
-  phrases?: Phrase[]
+  experiences?: Experience[]
 }
 
-export default function Phrases({phrases}: Props) {
+export default function Experiences({experiences}: Props) {
   return (
     <>
       <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
@@ -22,8 +23,8 @@ export default function Phrases({phrases}: Props) {
             </p>
           </div>
           <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-            {!phrases && <>Error al obtener las phrases...</>}
-            {phrases && phrases.map(phrase => (
+            {!experiences && <>Error al obtener las phrases...</>}
+            {experiences && experiences.map(phrase => (
               <div className="flex flex-col rounded-lg shadow-lg overflow-hidden" key={phrase._id}>
                 <div className="flex-shrink-0">
                   <img className="h-48 w-full object-cover" src={phrase.metadata.images[0].image.url}
@@ -31,13 +32,15 @@ export default function Phrases({phrases}: Props) {
                 </div>
                 <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                   <div className="flex-1">
-                    <a href="#" className="block mt-2">
-                      <p className="text-xl font-semibold text-indigo-600">
-                        {phrase.title}
-                      </p>
+                    <div className="block mt-2">
+                      <Link href={`/experiencia/${phrase.slug}`}>
+                        <p className="text-xl font-semibold text-indigo-600">
+                          {phrase.title}
+                        </p>
+                      </Link>
                       <div className="mt-3 text-base phrase-content-gradient max-h-52 overflow-hidden"
-                         dangerouslySetInnerHTML={{ __html: phrase.content }}/>
-                    </a>
+                           dangerouslySetInnerHTML={{ __html: phrase.content }}/>
+                    </div>
                   </div>
                   <div className="mt-6 flex items-center">
                     <div className="flex-shrink-0">
