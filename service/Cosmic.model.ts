@@ -52,6 +52,14 @@ export interface ExperienceProps {
 }
 
 export interface Experience extends CosmicObject<ExperienceProps> {
+  type_slug: 'experiences'
+}
+
+export interface PhraseProps {
+  author: Author
+}
+
+export interface Phrase extends CosmicObject<PhraseProps> {
   type_slug: 'phrases'
 }
 

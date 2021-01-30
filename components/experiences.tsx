@@ -1,11 +1,15 @@
 import { Experience } from "../service/Cosmic.model";
 import Link from "next/link";
+import ErrorPage from "next/error";
 
 interface Props {
   experiences?: Experience[]
 }
 
 export default function Experiences({experiences}: Props) {
+  if(!experiences) {
+    return <ErrorPage statusCode={404} />;
+  }
   return (
     <>
       <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
