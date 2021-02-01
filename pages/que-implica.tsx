@@ -23,7 +23,7 @@ export default function Implications() {
                 </dt>
                 <dd className="mt-2 text-base text-gray-500">
                   No, no tiene ningún costo.
-                  En <b>NoCumple.cl</b> simplmente queremos empoderar a los clientes, darle fuerza a su voz y exponer a
+                  En <b>NoCumple.cl</b> simplemente queremos empoderar a los clientes, darle fuerza a su voz y exponer a
                   las empresas que entregan un mal servicio.
                 </dd>
               </div>
