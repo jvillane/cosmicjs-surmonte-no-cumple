@@ -38,7 +38,8 @@ jobs:
           export "COSMIC_READ_KEY=${{ secrets.COSMIC_READ_KEY }}"
           export "COSMIC_BUCKET=${{ secrets.COSMIC_BUCKET }}"
           export "GTM_ID=${{ secrets.GTM_ID }}"
-          sed "s/:COSMIC_READ_KEY/${COSMIC_READ_KEY}/g; s/:COSMIC_BUCKET/${COSMIC_BUCKET}/g; s/:GTM_ID/${GTM_ID}/g;" .env.template > .env
+          export "GA_ID=${{ secrets.GA_ID }}"
+          sed "s/:COSMIC_READ_KEY/${COSMIC_READ_KEY}/g; s/:COSMIC_BUCKET/${COSMIC_BUCKET}/g; s/:GA_ID/${GA_ID}/g; s/:GTM_ID/${GTM_ID}/g;" .env.template > .env
           npm install
           node scripts/generateSiteMap.js
           npm run build
