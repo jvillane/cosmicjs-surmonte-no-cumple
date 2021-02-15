@@ -1,3 +1,8 @@
+:root {
+	--color-primary: #ff6600;
+	--color-secondary: #868686;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,25 +15,5 @@
 
 .featured-h {
 	height: 450px;
-	@apply pb-16 bg-indigo-600 lg:pb-0 lg:z-10 lg:relative;
-}
-
-.text-primary {
-	@apply text-indigo-600
-}
-
-.bg-primary {
-	@apply bg-indigo-500
-}
-
-.border-primary {
-	@apply border-indigo-500
-}
-
-.text-secondary {
-	@apply text-gray-600
-}
-
-.bg-secondary {
-	@apply text-gray-500
+	@apply pb-16 bg-secondary lg:pb-0 lg:z-10 lg:relative;
 }
