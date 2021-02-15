@@ -1,12 +1,15 @@
+import NavBar from "../components/navbar";
+
 export default function Implications() {
   return (
     <>
-      <section className="py-8 bg-indigo-700 overflow-hidden md:py-12 lg:py-20">
+      <NavBar/>
+      <section className="py-8 bg-secondary overflow-hidden md:py-12 lg:py-20">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative">
             <blockquote className="mt-10">
               <h2 className="max-w-3xl mx-auto text-center text-3xl leading-9 font-medium text-white">
-                ¿Qué implica participar de la iniciativa <b>NoCumple.cl</b>?
+                ¿Qué implica participar de la iniciativa <b>No Cumple</b>?
               </h2>
             </blockquote>
           </div>
@@ -23,7 +26,7 @@ export default function Implications() {
                 </dt>
                 <dd className="mt-2 text-base text-gray-500">
                   No, no tiene ningún costo.
-                  En <b>NoCumple.cl</b> simplemente queremos empoderar a los clientes, darle fuerza a su voz y exponer a
+                  En <b>No Cumple</b> simplemente queremos empoderar a los clientes, darle fuerza a su voz y exponer a
                   las empresas que entregan un mal servicio.
                 </dd>
               </div>

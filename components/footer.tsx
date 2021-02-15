@@ -18,7 +18,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 md:mt-0 md:order-1">
           <p className="text-center text-base text-gray-600">
-            &copy; 2021 nocumple.cl, Todos los derechos reservados.
+            &copy; 2021 nocumple.cl - Todos los derechos reservados.
           </p>
         </div>
       </div>

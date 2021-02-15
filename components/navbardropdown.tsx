@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Transition } from '@headlessui/react'
 import { useState } from 'react'
-import { ChevronDown } from "heroicons-react";
+import { ChevronDown, ChevronUp } from "heroicons-react";
+import { useClickAway } from 'react-use';
 
 interface Props {
   text: string
@@ -9,13 +10,22 @@ interface Props {
 
 const NavbarDropdown: React.FC<Props> = ({ text, children }) => {
   const [isOpen, setIsOpen] = useState(false)
-
+  const ref = useRef(null);
+  
+  useClickAway(ref, () => {
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  })
+  
   return (
-    <>
-      <button type="button" className="group bg-white text-gray-500 inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none border-white hover:border-indigo-500 border-b-2 pb-2"
-        onClick={() => setIsOpen(!isOpen)}>
+    <div ref={ref}>
+      <button type="button"
+              className="group bg-white text-gray-500 inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none border-white hover:border-primary border-b-2 pb-2"
+              onClick={() => setIsOpen(!isOpen)}>
         <span>{text}</span>
-        <ChevronDown></ChevronDown>
+        {!isOpen && <ChevronDown/>}
+        {isOpen && <ChevronUp/>}
       </button>
       <Transition
         show={isOpen}
@@ -32,7 +42,7 @@ const NavbarDropdown: React.FC<Props> = ({ text, children }) => {
           </div>
         </div>
       </Transition>
-    </>
+    </div>
   );
 }
 

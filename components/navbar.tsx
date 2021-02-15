@@ -1,21 +1,15 @@
 import { Transition } from "@headlessui/react";
 import {
-  ArchiveOutline,
   ChartBarOutline,
-  ChartPieOutline,
-  ChartSquareBarOutline,
-  ChevronDown,
   ClipboardCheckOutline,
+  Cube,
   CursorClick,
-  CursorClickOutline,
   DocumentReportOutline,
   MenuOutline,
   RefreshOutline,
   ScaleOutline,
   ShieldCheck,
-  ShieldCheckOutline,
   ViewGrid,
-  ViewGridOutline,
   XOutline
 } from "heroicons-react";
 import { useState } from "react";
@@ -29,9 +23,10 @@ export default function NavBar() {
       <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div>
           <a href="#" className="flex">
-            <span className="sr-only">Workflow</span>
-            <img className="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                 alt=""></img>
+            <span className="sr-only">Logo</span>
+            <div className="h-8 w-8 text-primary">
+              <Cube/>
+            </div>
           </a>
         </div>
         <div className="-mr-2 -my-2 md:hidden">
@@ -45,73 +40,62 @@ export default function NavBar() {
         <div className="hidden md:flex-1 md:flex md:items-center md:justify-between">
           <nav className="flex space-x-10">
             <div className="relative">
-              <NavbarDropdown text="Servicios">
+              <NavbarDropdown text="Etapas">
                 <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                   <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                     <div
-                      className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
-                      <ClipboardCheckOutline></ClipboardCheckOutline>
+                      className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white sm:h-12 sm:w-12">
+                      <ClipboardCheckOutline/>
                     </div>
                     <div className="ml-4">
-                      <p className="text-base font-medium text-gray-900">Check List</p>
-                      <p className="mt-1 text-sm text-gray-500">Te entregamos una lista con lo que debes fijarte el día
-                        de la entrega</p>
+                      <p className="text-base font-medium text-gray-900">Aún no firmo</p>
+                      <p className="mt-1 text-sm text-gray-500">
+                        Tenemos algunos consejos con los que puedes orientarte antes de embarcarte con cualquier inmobiliaria.
+                      </p>
                     </div>
                   </a>
                   
                   <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                     <div
-                      className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
-                      <ChartBarOutline></ChartBarOutline>
+                      className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white sm:h-12 sm:w-12">
+                      <ChartBarOutline/>
                     </div>
                     <div className="ml-4">
-                      <p className="text-base font-medium text-gray-900">Registro Online</p>
-                      <p className="mt-1 text-sm text-gray-500">Te ayudamos a medir y gestionar el nivel de cumplimiento
-                        de Postventa</p>
+                      <p className="text-base font-medium text-gray-900">Aún no me entregan</p>
+                      <p className="mt-1 text-sm text-gray-500">
+                        Al momento de la entrega es de vital importancia tener claro en qué fijarte, revisa nuestro listado.
+                      </p>
                     </div>
                   </a>
                   
                   <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                     <div
-                      className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
-                      <ScaleOutline></ScaleOutline>
+                      className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white sm:h-12 sm:w-12">
+                      <ScaleOutline/>
                     </div>
                     <div className="ml-4">
-                      <p className="text-base font-medium text-gray-900">Asesoría Legal</p>
-                      <p className="mt-1 text-sm text-gray-500">¿La Postventa Inmobiliaria <b>no cumple</b>? Te
-                        acompañamos en el proceso legal</p>
+                      <p className="text-base font-medium text-gray-900">Post venta</p>
+                      <p className="mt-1 text-sm text-gray-500">
+                        Los servicios de post venta tienen pésima fama en nuestro país, pero no todo está perdido si no te responden
+                      </p>
                     </div>
-                  </a>
-                </div>
-                <div className="p-5 bg-gray-50 sm:p-8">
-                  <a href="#" className="-m-3 p-3 flow-root rounded-md hover:bg-gray-100">
-                    <div className="flex items-center">
-                      <div className="text-base font-medium text-gray-900">Enterprise</div>
-                      <span
-                        className="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-indigo-100 text-indigo-800">New</span>
-                    </div>
-                    <p className="mt-1 text-sm text-gray-500">Mejora tu gestión de Postventa Inmobiliaria con nuestras
-                      herramientas</p>
                   </a>
                 </div>
               </NavbarDropdown>
             </div>
             <a href="#"
-               className="text-base font-medium text-gray-500 hover:text-gray-900 border-white hover:border-indigo-500 border-b-2 pb-2">
-              Personas
+               className="text-base font-medium text-gray-500 hover:text-gray-900 border-white hover:border-primary border-b-2 pb-2">
+              Te ayudamos
             </a>
             <a href="#"
-               className="text-base font-medium text-gray-500 hover:text-gray-900 border-white hover:border-indigo-500 border-b-2 pb-2">
-              Empresas
+               className="text-base font-medium text-gray-500 hover:text-gray-900 border-white hover:border-primary border-b-2 pb-2">
+              Quiénes somos
             </a>
           </nav>
           <div className="flex items-center md:ml-12">
-            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-              Sign in
-            </a>
             <a href="#"
-               className="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-secondary hover:bg-indigo-700">
-              Sign up
+               className="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary">
+              ¡Contáctanos!
             </a>
           </div>
         </div>
@@ -131,12 +115,13 @@ export default function NavBar() {
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
-                  <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                       alt="Workflow"></img>
+                  <div className="h-8 w-8 text-primary">
+                    <Cube size={36}/>
+                  </div>
                 </div>
                 <div className="-mr-2">
                   <button type="button"
-                          className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                          className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"
                           onClick={() => setIsOpen(false)}>
                     <span className="sr-only">Close menu</span>
                     <XOutline></XOutline>
@@ -147,7 +132,7 @@ export default function NavBar() {
                 <nav className="grid gap-6">
                   <a href="#" className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
                     <div
-                      className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
+                      className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white">
                       <ChartBarOutline></ChartBarOutline>
                     </div>
                     <div className="ml-4 text-base font-medium text-gray-900">
@@ -157,7 +142,7 @@ export default function NavBar() {
                   
                   <a href="#" className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
                     <div
-                      className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
+                      className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white">
                       <CursorClick></CursorClick>
                     </div>
                     <div className="ml-4 text-base font-medium text-gray-900">
@@ -167,7 +152,7 @@ export default function NavBar() {
                   
                   <a href="#" className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
                     <div
-                      className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
+                      className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white">
                       <ShieldCheck></ShieldCheck>
                     </div>
                     <div className="ml-4 text-base font-medium text-gray-900">
@@ -177,7 +162,7 @@ export default function NavBar() {
                   
                   <a href="#" className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
                     <div
-                      className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
+                      className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white">
                       <ViewGrid></ViewGrid>
                     </div>
                     <div className="ml-4 text-base font-medium text-gray-900">
@@ -187,7 +172,7 @@ export default function NavBar() {
                   
                   <a href="#" className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
                     <div
-                      className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
+                      className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white">
                       <RefreshOutline></RefreshOutline>
                     </div>
                     <div className="ml-4 text-base font-medium text-gray-900">
@@ -197,7 +182,7 @@ export default function NavBar() {
                   
                   <a href="#" className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
                     <div
-                      className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
+                      className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white">
                       <DocumentReportOutline></DocumentReportOutline>
                     </div>
                     <div className="ml-4 text-base font-medium text-gray-900">
@@ -240,18 +225,6 @@ export default function NavBar() {
                 <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
                   Events
                 </a>
-              </div>
-              <div className="mt-6">
-                <a href="#"
-                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-secondary hover:bg-indigo-700">
-                  Sign up
-                </a>
-                <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  Existing customer?
-                  <a href="#" className="text-indigo-600 hover:text-indigo-500">
-                    Sign in
-                  </a>
-                </p>
               </div>
             </div>
           </div>
