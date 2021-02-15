@@ -1,5 +1,6 @@
 import Featured from "../components/featured";
 import TopBar from "../components/topbar";
+import NavBar from "../components/navbar";
 import Experiences from "../components/experiences";
 import { Experience, Phrase } from "../service/Cosmic.model";
 import { CosmicService } from "../service/Cosmic.service";
@@ -30,10 +31,13 @@ const Index: NextPage<Props> = ({experiences, phrases}) => {
     <div className="app">
       <div className="lg:flex lg:items-center lg:justify-between">
         <div className="flex-1 min-w-0">
+        <div className="relative bg-white">
+          <NavBar/>
           <TopBar/>
           <Featured phrases={phrases}/>
           <Experiences experiences={experiences}/>
           <GetInTouch/>
+          </div>
         </div>
       </div>
     </div>
