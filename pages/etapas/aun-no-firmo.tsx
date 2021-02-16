@@ -45,10 +45,11 @@ export default function NotSignedYet() {
                 </dt>
                 <dd className="mt-2 text-base text-gray-500">
                   <p className="pb-6">
-                    Corresponde a la firma un acuerdo de reserva entre el comprador y la inmobiliaria, donde usualmente
-                    existe el pago de un monto por parte del comprador y un plazo para la formalización de a compra, a
-                    modo de asegurar la seriedad del compromiso. El obetivo de la firma de la reserva otorga seguridad
-                    al posible comprador respecto a que la propiedad no será ofrecida a otros posibles vendedores.
+                    Corresponde a la firma de un acuerdo de reserva entre el comprador y la inmobiliaria, donde
+                    usualmente existe el pago de un monto por parte del comprador y un plazo para la formalización de la
+                    compra, a modo de asegurar la seriedad del compromiso. El objetivo de la firma de la reserva es
+                    otorgar seguridad al posible comprador respecto a que la propiedad no será ofrecida a otros posibles
+                    compradores.
                   </p>
                   <p className="pb-6">
                     Durante esta etapa el solicitante debe gestionar (entre otras cosas) la obtención del crédito
@@ -71,7 +72,7 @@ export default function NotSignedYet() {
                 <dd className="mt-2 text-base text-gray-500">
                   <p className="pb-6">
                     Es un contrato en donde comprador e inmobiliaria se comprometen a dar término a la operación. Se
-                    suelen especificar las penalizaciones, que aplicarán en caso de que añguna de las partes no cumpla
+                    suelen especificar las penalizaciones, que aplicarán en caso de que alguna de las partes no cumpla
                     con su compromiso. Se estipulan montos, plazos y pagos entre otras cláusulas correspondientes.
                   </p>
                   <p className="pb-6">
