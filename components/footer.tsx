@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex justify-center space-x-6 md:order-2">
           <a href="mailto:contacto@nocumple.cl" className="text-gray-500 hover:text-gray-700">
             <span className="sr-only">Correo</span>
-            <MailOutline></MailOutline>
+            <MailOutline/>
           </a>
           <a href="https://www.instagram.com/surmonte_nocumple/" className="text-gray-500 hover:text-gray-700">
             <span className="sr-only">Instagram</span>
@@ -18,7 +18,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 md:mt-0 md:order-1">
           <p className="text-center text-base text-gray-600">
-            &copy; 2021 nocumple.cl - Todos los derechos reservados.
+            <span className="text-primary font-bold">&copy; 2021 nocumple.cl</span> - Todos los derechos reservados.
           </p>
         </div>
       </div>
