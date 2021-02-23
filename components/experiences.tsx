@@ -4,11 +4,15 @@ import ErrorPage from "next/error";
 
 interface Props {
   experiences?: Experience[]
+  length?: number
 }
 
-export default function Experiences({experiences}: Props) {
-  if(!experiences) {
-    return <ErrorPage statusCode={404} />;
+export default function Experiences({ experiences, length }: Props) {
+  if (!experiences) {
+    return <ErrorPage statusCode={404}/>;
+  }
+  if (length) {
+    experiences = experiences.slice(0, length);
   }
   return (
     <>
@@ -22,28 +26,32 @@ export default function Experiences({experiences}: Props) {
               Las vivencias de sus clientes
             </h2>
             <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-600 sm:mt-4">
-              Conozca directamente de los clientes lo que ha significado para ellos vivir la <b className="text-orange-600">"Experiencia Surmonte"</b>
+              Conozca directamente de los clientes lo que ha significado para ellos vivir la <b
+              className="text-orange-600">"Experiencia Surmonte"</b>
             </p>
           </div>
           <div className="mt-12 grid gap-20 lg:grid-cols-3 lg:max-w-none ">
             {!experiences && <>Error al obtener las phrases...</>}
             {experiences && experiences.map(experience => (
-            <div className="inset-0 bg-gradient-to-r from-orange-400 to-yellow-400 shadow-lg transform rotate-6 sm:rounded-3xl">
+              <div key={experience.slug}
+                   className="inset-0 bg-gradient-to-r from-orange-400 to-yellow-400 shadow-lg transform rotate-6 sm:rounded-3xl">
                 <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-                  <div className="transform -rotate-6 rounded-lg shadow-lg overflow-hidden sm:rounded-3xl" key={experience._id}>
+                  <div className="transform -rotate-6 rounded-lg shadow-lg overflow-hidden sm:rounded-3xl"
+                       key={experience._id}>
                     <div className="flex-shrink-0">
-                      <img className="h-48 w-full object-cover" src={experience.metadata.images[0].image.url} alt={experience.title}/>
+                      <img className="h-48 w-full object-cover" src={experience.metadata.images[0].image.url}
+                           alt={experience.title}/>
                     </div>
                     <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                       <div className="flex-1">
                         <Link href={`/experiencia/${experience.slug}`} passHref>
-                        <a href="#" className="block max-h-52 overflow-hidden">
-                          <p className="text-xl font-semibold text-orange-600">
-                            {experience.title}
-                          </p>
-                          <div className="mt-3 text-base phrase-content-gradient max-h-44"
-                              dangerouslySetInnerHTML={{ __html: experience.content }}/>
-                        </a>
+                          <a href="#" className="block max-h-52 overflow-hidden">
+                            <p className="text-xl font-semibold text-orange-600">
+                              {experience.title}
+                            </p>
+                            <div className="mt-3 text-base phrase-content-gradient max-h-44"
+                                 dangerouslySetInnerHTML={{ __html: experience.content }}/>
+                          </a>
                         </Link>
                       </div>
                       <div className="mt-6 flex items-center">

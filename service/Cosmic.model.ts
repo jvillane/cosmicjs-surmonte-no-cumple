@@ -50,6 +50,7 @@ export interface Project extends CosmicObject<AuthorProps> {
 
 export interface ExperienceProps {
   project: Project
+  subtitle: string
   images: {
     image: CosmicImage
   }[]

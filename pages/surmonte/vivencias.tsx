@@ -1,14 +1,38 @@
 import React from 'react';
-import Link from 'next/link';
-import Img from 'react-optimized-image';
 import NavBar from '../../components/navbar';
-import { EmojiHappy, EmojiSad } from "heroicons-react";
+import Experiences from "../../components/experiences";
+import { GetStaticProps, NextPage } from "next";
+import { CosmicService } from "../../service/Cosmic.service";
+import { Experience, Phrase } from "../../service/Cosmic.model";
 
-export default function SurmonteExperience() {
+interface Props {
+  experiences?: Experience[]
+}
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  try {
+    const experiences = await CosmicService.getObjects<Experience>({ type: 'experiences' });
+    return {
+      props: { experiences }
+    }
+  } catch (err) {
+    return {
+      props: {}
+    }
+  }
+}
+
+const SurmonteExperiences: NextPage<Props> = ({experiences}) => {
   return (
-    <>
-      <NavBar/>
-      <h1>Vivencias</h1>
-    </>
+    <div className="lg:flex lg:items-center lg:justify-between">
+      <div className="flex-1 min-w-0">
+        <div className="relative bg-white">
+          <NavBar/>
+          <Experiences experiences={experiences}/>
+        </div>
+      </div>
+    </div>
   );
 }
+
+export default SurmonteExperiences;

@@ -36,7 +36,7 @@ const Index: NextPage<Props> = ({experiences, phrases}) => {
           <NavBar/>
           <Title/>
           <Featured phrases={phrases}/>
-          <Experiences experiences={experiences}/>
+          <Experiences experiences={experiences} length={3}/>
           <ContactUs/>
           </div>
         </div>
