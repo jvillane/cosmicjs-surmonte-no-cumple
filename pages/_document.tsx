@@ -39,9 +39,13 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body className="aselect-none">
-          <Main/>
-          <NextScript/>
-          <Footer/>
+          <div className="flex flex-col h-screen">
+            <Main/>
+            <div className="flex-grow">
+              <NextScript/>
+            </div>
+            <Footer/>
+          </div>
         </body>
       </Html>
     );

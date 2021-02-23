@@ -15,7 +15,7 @@ export default function GetInTouch() {
         <div className="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
           <Link href="/que-implica" passHref>
             <a href="#"
-               className="flex items-center justify-center px-4 py-3 border border-transparent font-medium rounded-md shadow-xl bg-primary text-white">
+               className="flex items-center justify-center px-4 py-3 border border-transparent font-medium rounded-md shadow-allxl bg-primary text-white">
               ¿Qué implica?
             </a>
           </Link>

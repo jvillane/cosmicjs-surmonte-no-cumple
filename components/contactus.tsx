@@ -9,7 +9,7 @@ export default function ContactUs() {
     <div className="bg-white py-16 sm:py-24">
         <div className="relative sm:py-16">
             <div aria-hidden="true" className="hidden sm:block">
-                <div className="absolute inset-y-0 left-0 w-1/2 bg-gray-50 rounded-r-3xl"></div>
+                <div className="absolute inset-y-0 left-0 w-1/2 bg-gray-200 opacity-50 rounded-r-3xl"></div>
                 <svg className="absolute top-8 left-1/2 -ml-3" width="404" height="392" fill="none" viewBox="0 0 404 392">
                     <defs>
                     <pattern id="8228f071-bcee-4ec8-905a-2a059a2cc4fb" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
