@@ -44,8 +44,12 @@ export interface Author extends CosmicObject<AuthorProps> {
   type_slug: 'authors'
 }
 
+export interface Project extends CosmicObject<AuthorProps> {
+  type_slug: 'projects'
+}
+
 export interface ExperienceProps {
-  author: Author
+  project: Project
   images: {
     image: CosmicImage
   }[]
