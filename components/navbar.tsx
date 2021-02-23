@@ -3,13 +3,22 @@ import { Transition } from "@headlessui/react";
 import {
   ChartBarOutline,
   ClipboardCheckOutline,
+  ClipboardListOutline,
+  ClipboardOutline,
   Cube,
+  CurrencyDollarOutline,
   CursorClick,
+  HandOutline,
   Home,
   Mail,
+  MailOutline,
   MenuOutline,
   ScaleOutline,
+  SearchCircleOutline,
   ShieldCheck,
+  ThumbDownOutline,
+  UserGroupOutline,
+  UsersOutline,
   ViewGrid,
   XOutline
 } from "heroicons-react";
@@ -26,7 +35,7 @@ const NavBar: React.FC = () => {
           <Link href="/">
             <a href="#" className="flex">
               <span className="sr-only">Logo</span>
-              <div className="h-8 w-8 text-primary">
+              <div className="h-8 w-8 text-orange-500">
                 <Cube/>
               </div>
             </a>
@@ -49,16 +58,52 @@ const NavBar: React.FC = () => {
               </a>
             </Link>
             <div className="relative">
-              <NavbarDropdown text="Etapas">
+              <NavbarDropdown text="Surmonte">
                 <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                  <Link href="/etapas/aun-no-firmo">
+                  <Link href="/surmonte/la-experiencia">
                     <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                       <div
                         className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white sm:h-12 sm:w-12">
-                        <ClipboardCheckOutline/>
+                        <ThumbDownOutline/>
                       </div>
                       <div className="ml-4">
-                        <p className="text-base font-medium text-gray-900">Aún no firmo</p>
+                        <p className="text-base font-medium text-gray-900">La experiencia Surmonte</p>
+                        <p className="mt-1 text-sm text-gray-500">
+                          Conoce desde la experiencia de sus clientes lo que esconde la trillada frase de la
+                          inmobiliaria.
+                        </p>
+                      </div>
+                    </a>
+                  </Link>
+                  <Link href="/surmonte/vivencias">
+                    <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                      <div
+                        className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white sm:h-12 sm:w-12">
+                        <UserGroupOutline/>
+                      </div>
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-gray-900">Vivencias</p>
+                        <p className="mt-1 text-sm text-gray-500">
+                          Algunas de las observaciones que han levantado los clientes de Surmonte en sus distintos
+                          proyectos.
+                        </p>
+                      </div>
+                    </a>
+                  </Link>
+                </div>
+              </NavbarDropdown>
+            </div>
+            <div className="relative">
+              <NavbarDropdown text="Te ayudamos">
+                <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                  <Link href="/te-ayudamos/proceso-de-compra">
+                    <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                      <div
+                        className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white sm:h-12 sm:w-12">
+                        <CurrencyDollarOutline/>
+                      </div>
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-gray-900">Proceso de Compra</p>
                         <p className="mt-1 text-sm text-gray-500">
                           Tenemos algunos consejos con los que puedes orientarte antes de embarcarte con cualquier
                           inmobiliaria.
@@ -66,14 +111,14 @@ const NavBar: React.FC = () => {
                       </div>
                     </a>
                   </Link>
-                  <Link href="/etapas/aun-no-me-entregan">
+                  <Link href="/te-ayudamos/proceso-de-entrega">
                     <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                       <div
                         className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white sm:h-12 sm:w-12">
-                        <ChartBarOutline/>
+                        <ClipboardListOutline/>
                       </div>
                       <div className="ml-4">
-                        <p className="text-base font-medium text-gray-900">Aún no me entregan</p>
+                        <p className="text-base font-medium text-gray-900">Proceso de Entrega</p>
                         <p className="mt-1 text-sm text-gray-500">
                           Al momento de la entrega es de vital importancia tener claro en qué fijarte, revisa nuestro
                           listado.
@@ -81,11 +126,11 @@ const NavBar: React.FC = () => {
                       </div>
                     </a>
                   </Link>
-                  <Link href="/etapas/post-venta">
+                  <Link href="/te-ayudamos/post-venta">
                     <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                       <div
                         className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white sm:h-12 sm:w-12">
-                        <ScaleOutline/>
+                        <SearchCircleOutline/>
                       </div>
                       <div className="ml-4">
                         <p className="text-base font-medium text-gray-900">Post venta</p>
@@ -112,8 +157,8 @@ const NavBar: React.FC = () => {
           </nav>
           <div className="flex items-center md:ml-12">
             <a href="#"
-               className="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary">
-              ¡Contáctanos!
+               className="flex gap-2 p-3 font-medium rounded-md bg-orange-500 text-white hover:bg-orange-400">
+              <MailOutline/> Contáctanos
             </a>
           </div>
         </div>
@@ -160,50 +205,62 @@ const NavBar: React.FC = () => {
                     </a>
                   </Link>
                   
-                  <Link href="/etapas/aun-no-firmo">
+                  <Link href="/surmonte/la-experiencia">
                     <a href="#" className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
                       <div
                         className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white">
                         <CursorClick/>
                       </div>
                       <div className="ml-4 text-base font-medium text-gray-900">
-                        Proceso de Compra
+                        Surmonte - La Experiencia
                       </div>
                     </a>
                   </Link>
                   
-                  <Link href="/etapas/aun-no-me-entregan">
+                  <Link href="/te-ayudamos/proceso-de-compra">
+                    <a href="#" className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                      <div
+                        className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white">
+                        <CursorClick/>
+                      </div>
+                      <div className="ml-4 text-base font-medium text-gray-900">
+                        Te ayudamos - Proceso de Compra
+                      </div>
+                    </a>
+                  </Link>
+                  
+                  <Link href="/te-ayudamos/proceso-de-entrega">
                     <a href="#" className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
                       <div
                         className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white">
                         <ShieldCheck/>
                       </div>
                       <div className="ml-4 text-base font-medium text-gray-900">
-                        Proceso de Entrega
+                        Te ayudamos - Proceso de Entrega
                       </div>
                     </a>
                   </Link>
                   
-                  <Link href="/etapas/post-venta">
+                  <Link href="/te-ayudamos/post-venta">
                     <a href="#" className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
                       <div
                         className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white">
                         <ViewGrid/>
                       </div>
                       <div className="ml-4 text-base font-medium text-gray-900">
-                        Proceso de Post Venta
+                        Te ayudamos - Proceso de Post Venta
                       </div>
                     </a>
                   </Link>
                   
-                  <Link href="/etapas/post-venta">
+                  <Link href="mailto:contacto@nocumple.cl">
                     <a href="#" className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
                       <div
                         className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white">
                         <Mail/>
                       </div>
                       <div className="ml-4 text-base font-medium text-gray-900">
-                        Contacto
+                        ¡Contáctanos!
                       </div>
                     </a>
                   </Link>
