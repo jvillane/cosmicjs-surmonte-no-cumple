@@ -3,14 +3,22 @@ import { Transition } from "@headlessui/react";
 import {
   ChartBarOutline,
   ClipboardCheckOutline,
+  ClipboardListOutline,
+  ClipboardOutline,
   Cube,
+  CurrencyDollarOutline,
   CursorClick,
+  HandOutline,
   Home,
   Mail,
   MailOutline,
   MenuOutline,
   ScaleOutline,
+  SearchCircleOutline,
   ShieldCheck,
+  ThumbDownOutline,
+  UserGroupOutline,
+  UsersOutline,
   ViewGrid,
   XOutline
 } from "heroicons-react";
@@ -56,7 +64,7 @@ const NavBar: React.FC = () => {
                     <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                       <div
                         className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white sm:h-12 sm:w-12">
-                        <ClipboardCheckOutline/>
+                        <ThumbDownOutline/>
                       </div>
                       <div className="ml-4">
                         <p className="text-base font-medium text-gray-900">La experiencia Surmonte</p>
@@ -71,7 +79,7 @@ const NavBar: React.FC = () => {
                     <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                       <div
                         className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white sm:h-12 sm:w-12">
-                        <ChartBarOutline/>
+                        <UserGroupOutline/>
                       </div>
                       <div className="ml-4">
                         <p className="text-base font-medium text-gray-900">Vivencias</p>
@@ -92,7 +100,7 @@ const NavBar: React.FC = () => {
                     <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                       <div
                         className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white sm:h-12 sm:w-12">
-                        <ClipboardCheckOutline/>
+                        <CurrencyDollarOutline/>
                       </div>
                       <div className="ml-4">
                         <p className="text-base font-medium text-gray-900">Proceso de Compra</p>
@@ -107,7 +115,7 @@ const NavBar: React.FC = () => {
                     <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                       <div
                         className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white sm:h-12 sm:w-12">
-                        <ChartBarOutline/>
+                        <ClipboardListOutline/>
                       </div>
                       <div className="ml-4">
                         <p className="text-base font-medium text-gray-900">Proceso de Entrega</p>
@@ -122,7 +130,7 @@ const NavBar: React.FC = () => {
                     <a href="#" className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                       <div
                         className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white sm:h-12 sm:w-12">
-                        <ScaleOutline/>
+                        <SearchCircleOutline/>
                       </div>
                       <div className="ml-4">
                         <p className="text-base font-medium text-gray-900">Post venta</p>

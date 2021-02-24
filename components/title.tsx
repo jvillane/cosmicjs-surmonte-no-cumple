@@ -2,7 +2,7 @@ export default function Title() {
   return (
       <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-base font-bold text-orange-600 tracking-wide uppercase">nocumple.cl</h2>
+          <h2 className="text-xl font-bold text-primary tracking-wide uppercase">nocumple.cl</h2>
           <p className="mt-1 text-4xl font-bold text-gray-800 sm:text-5xl sm:tracking-tight lg:text-6xl">
             Inmobiliaria Surmonte
           </p>

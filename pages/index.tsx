@@ -1,11 +1,10 @@
 import Featured from "../components/featured";
 import Title from "../components/title";
 import NavBar from "../components/navbar";
-import Experiences from "../components/experiences";
+import Experiences from "../components/experiences" ;
 import { Experience, Phrase } from "../service/Cosmic.model";
 import { CosmicService } from "../service/Cosmic.service";
 import { GetStaticProps, NextPage } from "next";
-//import GetInTouch from "../components/getintouch";
 import ContactUs from "../components/contactus";
 
 interface Props {
@@ -20,7 +19,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     return {
       props: { experiences, phrases }
     }
-  } catch (err) {
+  }
+  catch (err) {
     return {
       props: {}
     }
@@ -32,12 +32,12 @@ const Index: NextPage<Props> = ({experiences, phrases}) => {
     <div className="app">
       <div className="lg:flex lg:items-center lg:justify-between">
         <div className="flex-1 min-w-0">
-        <div className="relative bg-white">
-          <NavBar/>
-          <Title/>
-          <Featured phrases={phrases}/>
-          <Experiences experiences={experiences} length={3}/>
-          <ContactUs/>
+          <div className="relative bg-white">
+            <NavBar/>
+            <Title/>
+            <Featured phrases={phrases}/>
+            <Experiences experiences={experiences} length={3}/>
+            <ContactUs/>
           </div>
         </div>
       </div>
