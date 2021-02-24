@@ -4,6 +4,7 @@ import Experiences from "../../components/experiences";
 import { GetStaticProps, NextPage } from "next";
 import { CosmicService } from "../../service/Cosmic.service";
 import { Experience, Phrase } from "../../service/Cosmic.model";
+import ContactUs from "../../components/contactus";
 
 interface Props {
   experiences?: Experience[]
@@ -29,6 +30,7 @@ const SurmonteExperiences: NextPage<Props> = ({experiences}) => {
         <div className="relative bg-white">
           <NavBar/>
           <Experiences experiences={experiences}/>
+          <ContactUs/>
         </div>
       </div>
     </div>

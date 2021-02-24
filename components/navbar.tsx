@@ -1,24 +1,18 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import {
-  ChartBarOutline,
-  ClipboardCheckOutline,
   ClipboardListOutline,
-  ClipboardOutline,
   Cube,
   CurrencyDollarOutline,
   CursorClick,
-  HandOutline,
   Home,
   Mail,
   MailOutline,
   MenuOutline,
-  ScaleOutline,
   SearchCircleOutline,
   ShieldCheck,
   ThumbDownOutline,
   UserGroupOutline,
-  UsersOutline,
   ViewGrid,
   XOutline
 } from "heroicons-react";
@@ -156,7 +150,7 @@ const NavBar: React.FC = () => {
             */}
           </nav>
           <div className="flex items-center md:ml-12">
-            <a href="#"
+            <a href="mailto:contacto@nocumple.cl"
                className="flex gap-2 p-3 font-medium rounded-md bg-orange-500 text-white hover:bg-orange-400">
               <MailOutline/> Contáctanos
             </a>

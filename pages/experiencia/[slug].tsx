@@ -3,6 +3,7 @@ import ErrorPage from 'next/error'
 import { CosmicService } from "../../service/Cosmic.service";
 import { Experience } from "../../service/Cosmic.model";
 import NavBar from "../../components/navbar";
+import ContactUs from "../../components/contactus";
 
 export const getStaticPaths = async () => {
   const experiences = await CosmicService.getObjects<{ slug: string }>({ type: 'experiences', props: 'slug' });
@@ -84,6 +85,9 @@ const ExperienceDetails: NextPage<Props> = ({ experience }) => {
             </div>
           </div>
         </div>
+        <div className="mt-32 prose prose-indigo prose-2xl text-secondary mx-auto"
+             dangerouslySetInnerHTML={{ __html: experience.content }}/>
+        <ContactUs/>
       </div>
     </>
   );

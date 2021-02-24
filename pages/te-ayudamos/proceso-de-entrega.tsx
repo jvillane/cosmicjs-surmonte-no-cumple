@@ -1,9 +1,6 @@
-import {
-  Check, CheckCircle
-} from "heroicons-react";
+import { Check, CheckCircle } from "heroicons-react";
 import NavBar from "../../components/navbar";
 import DATA from "../../data/proceso-de-entrega";
-import Link from "next/link";
 
 export default function NotSignedYet() {
   return (
@@ -92,12 +89,10 @@ export default function NotSignedYet() {
           </div>
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
             <div className="inline-flex rounded-md shadow">
-              <Link href="mailto:contacto@nocumple.cl">
-                <a href="#"
-                   className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary">
-                  Te acompañamos, contáctanos
-                </a>
-              </Link>
+              <a href="mailto:contacto@nocumple.cl"
+                 className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary">
+                Te acompañamos, contáctanos
+              </a>
             </div>
           </div>
         </div>
@@ -131,7 +126,8 @@ export default function NotSignedYet() {
                   ))}
                 </div>
               </div>
-              <span className="inline-flex items-center px-3 py-0.5 rounded-full border-2 border-primary-500 text-sm font-medium bg-primary-100 text-primary-800 pointer-events-none absolute top-6 right-6">
+              <span
+                className="inline-flex items-center px-3 py-0.5 rounded-full border-2 border-primary-500 text-sm font-medium bg-primary-100 text-primary-800 pointer-events-none absolute top-6 right-6">
                 {data.label.text}
               </span>
             </div>

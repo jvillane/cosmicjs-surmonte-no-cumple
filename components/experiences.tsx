@@ -1,6 +1,7 @@
 import { Experience } from "../service/Cosmic.model";
 import Link from "next/link";
 import ErrorPage from "next/error";
+import ContactUs from "./contactus";
 
 interface Props {
   experiences?: Experience[]
@@ -50,7 +51,7 @@ export default function Experiences({ experiences, length }: Props) {
                               {experience.title}
                             </p>
                             <div className="mt-3 text-base phrase-content-gradient max-h-44"
-                                 dangerouslySetInnerHTML={{ __html: experience.content }}/>
+                                 dangerouslySetInnerHTML={{ __html: experience.metadata.subtitle }}/>
                           </a>
                         </Link>
                       </div>
