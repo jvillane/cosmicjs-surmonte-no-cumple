@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Img from 'react-optimized-image';
+import Image from 'next/image';
 import NavBar from '../../components/navbar';
 import { EmojiHappy, EmojiSad } from "heroicons-react";
 
@@ -32,8 +32,8 @@ export default function SurmonteExperience() {
               <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
                 <figure>
                   <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
-                    <Img className="rounded-lg shadow-lg object-cover object-center"
-                         src={require('../../images/surmonte_condell54.jpg')}
+                    <Image className="rounded-lg shadow-lg object-cover object-center"
+                         src="/surmonte_condell54.jpg"
                          alt="Fotografía del edificio Condell54" width="1184" height="1376"/>
                   </div>
                 </figure>
