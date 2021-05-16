@@ -11,16 +11,16 @@ export default function Findings() {
     <div className="bg-white">
       <div className="text-center max-w-4xl mx-auto px-4 py-8 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8 text-primary">
         <h2 className="text-2xl font-extrabold tracking-tight">La importancia de saber elegir a quién comprar...</h2>
-        <p className="mt-4 max-w-3xl text-lg text-gray-700">
+        <p className="mt-4 text-lg text-gray-700">
           Independiente de si lo que buscas es un lugar para vivir o para hacer negocios, los problemas de una
           construcción y terminaciones deficientes teminarán afectando tu paz mental directamente o a través de tus
           desafortunados arrendatarios.
         </p>
-        <p className="mt-4 max-w-3xl text-lg text-gray-700">
+        <p className="mt-4 text-lg text-gray-700">
           Por ejemplo, <b>algunos de los problemas que fueron detectado por parte de Surmonte Inmobiliaria</b> son:
         </p>
         <div
-          className="text-center mt-12 grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-6 lg:gap-y-16">
+          className="text-center mt-12 grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-x-6 lg:gap-y-16">
           {features.map((feature) => (
             <div key={feature.name}>
               <div className="mt-6">
