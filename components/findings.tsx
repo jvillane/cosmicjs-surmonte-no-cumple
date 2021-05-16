@@ -10,7 +10,7 @@ export default function Findings() {
   return (
     <div className="bg-white">
       <div className="text-center max-w-4xl mx-auto px-4 py-8 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8 text-primary">
-        <h2 className="text-2xl font-extrabold tracking-tight">La importancia de saber elegir a quién comprar...</h2>
+        <h2 className="text-4xl font-extrabold tracking-tight">La importancia de saber elegir a quién comprar...</h2>
         <p className="mt-4 text-lg text-gray-700">
           Independiente de si lo que buscas es un lugar para vivir o para hacer negocios, los problemas de una
           construcción y terminaciones deficientes teminarán afectando tu paz mental directamente o a través de tus
@@ -24,7 +24,7 @@ export default function Findings() {
           {features.map((feature) => (
             <div key={feature.name}>
               <div className="mt-6">
-                <h3 className="text-lg font-bold text-primary">{feature.name}</h3>
+                <h3 className="text-2xl font-extrabold text-primary">{feature.name}</h3>
                 <p className="mt-2 text-base text-gray-600">{feature.description}</p>
               </div>
             </div>
