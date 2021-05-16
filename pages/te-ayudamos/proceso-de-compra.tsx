@@ -6,7 +6,7 @@ export default function NotSignedYet() {
     <>
       <NavBar/>
       <div className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="lg:text-center">
             <h2 className="text-base text-primary font-semibold tracking-wide uppercase">Consejos y puntos de
               atención</h2>
@@ -26,12 +26,12 @@ export default function NotSignedYet() {
         </div>
       </div>
       <hr/>
-      <div className="container mx-auto">
+      <div className="px-4">
         <div className="lg:text-center pt-12 pb-6">
           <h2 className="text-2xl leading-8 text-primary font-semibold tracking-wide">Etapas del Proceso de
             Compra</h2>
         </div>
-        <div className="mt-10 px-8">
+        <div className="mt-10 px-4">
           <dl className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-10">
             <div className="flex">
               <div className="flex-shrink-0">
@@ -39,7 +39,7 @@ export default function NotSignedYet() {
                   <Newspaper className="h-6 w-6"/>
                 </div>
               </div>
-              <div className="ml-4">
+              <div className="ml-3">
                 <dt className="text-lg leading-6 font-medium text-secondary">
                   Reserva
                 </dt>

@@ -19,11 +19,11 @@ export default function NotSignedYet() {
           </p>
         </div>
         <dl
-          className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-1 sm:gap-y-12 lg:grid-cols-2 lg:gap-x-8">
+          className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-1 sm:gap-y-12 lg:grid-cols-2 lg:gap-x-8 sm:px-6 lg:px-8">
           <div className="flex">
             <CheckCircle className="flex-shrink-0 h-6 w-6 text-primary"/>
             <div className="ml-3">
-              <dt className="text-lg leading-6 font-medium text-gray-900">
+              <dt className="text-lg leading-6 font-medium text-primary">
                 Incentivos
               </dt>
               <dd className="mt-2 text-base text-gray-500">
@@ -35,7 +35,7 @@ export default function NotSignedYet() {
           <div className="flex">
             <CheckCircle className="flex-shrink-0 h-6 w-6 text-primary"/>
             <div className="ml-3">
-              <dt className="text-lg leading-6 font-medium text-gray-900">
+              <dt className="text-lg leading-6 font-medium text-primary">
                 Rechazo de la Entrega
               </dt>
               <dd className="mt-2 text-base text-gray-500">
@@ -47,7 +47,7 @@ export default function NotSignedYet() {
           <div className="flex">
             <CheckCircle className="flex-shrink-0 h-6 w-6 text-primary"/>
             <div className="ml-3">
-              <dt className="text-lg leading-6 font-medium text-gray-900">
+              <dt className="text-lg leading-6 font-medium text-primary">
                 Oportunidad
               </dt>
               <dd className="mt-2 text-base text-gray-500">
@@ -60,7 +60,7 @@ export default function NotSignedYet() {
           <div className="flex">
             <CheckCircle className="flex-shrink-0 h-6 w-6 text-primary"/>
             <div className="ml-3">
-              <dt className="text-lg leading-6 font-medium text-gray-900">
+              <dt className="text-lg leading-6 font-medium text-primary">
                 Conveniencia
               </dt>
               <dd className="mt-2 text-base text-gray-500">
@@ -99,10 +99,10 @@ export default function NotSignedYet() {
       </div>
       <div className="container mx-auto pt-16">
         <div
-          className="overflow-hidden md:grid md:grid-cols-2 md:gap-4">
+          className="overflow-hidden md:grid md:grid-cols-2 xl:grid-cols-3 md:gap-4">
           {DATA.map((data, dIndex) => (
             <div key={`data_${dIndex}`}
-                 className="rounded relative group bg-white p-6 border-4 ring-inset border-gray-200 hover:border-primary-light">
+                 className="rounded relative group bg-white p-6 border-4 ring-inset border-gray-200 hover:border-primary">
               <h3 className="text-2xl font-medium text-primary">
                 <span className="absolute inset-0" aria-hidden="true"/>
                 {data.title}
@@ -126,10 +126,6 @@ export default function NotSignedYet() {
                   ))}
                 </div>
               </div>
-              <span
-                className="inline-flex items-center px-3 py-0.5 rounded-full border-2 border-primary-500 text-sm font-medium bg-primary-100 text-primary-800 pointer-events-none absolute top-6 right-6">
-                {data.label.text}
-              </span>
             </div>
           ))}
         </div>

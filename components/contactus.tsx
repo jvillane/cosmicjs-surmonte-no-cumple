@@ -6,10 +6,9 @@ import {
 
 export default function ContactUs() {
     return (
-    <div className="bg-white py-16 sm:py-24">
+    <div className="bg-white py-8 sm:py-12">
         <div className="relative sm:py-16">
             <div aria-hidden="true" className="hidden sm:block">
-                <div className="absolute inset-y-0 left-0 w-1/2 bg-gray-200 opacity-50 rounded-r-3xl"></div>
                 <svg className="absolute top-8 left-1/2 -ml-3" width="404" height="392" fill="none" viewBox="0 0 404 392">
                     <defs>
                     <pattern id="8228f071-bcee-4ec8-905a-2a059a2cc4fb" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -37,12 +36,12 @@ export default function ContactUs() {
                             </p>
                         </div>
                         <div className="flex justify-center gap-6 mt-6 mx-auto max-w-sm">
-                            <a href="mailto:contacto@nocumple.cl" className="flex gap-2 p-3 font-medium rounded-md bg-white text-gray-700 hover:bg-orange-200">
-                                <MailOutline/> Contáctanos
+                            <a href="mailto:contacto@nocumple.cl" className="flex gap-2 p-3 font-medium rounded-md bg-white text-primary-900 hover:bg-gray-200">
+                                <MailOutline className="hidden md:block"/> Contáctanos
                             </a>
                             <Link href="/que-implica" passHref>
-                                <a href="#" className="flex gap-2 p-3 border border-transparent font-medium rounded-md bg-white text-gray-700 hover:bg-orange-200">
-                                    ¿Qué Implica? <ArrowCircleRightOutline/>
+                                <a href="#" className="flex gap-2 p-3 border border-transparent font-medium rounded-md bg-white text-primary-900 hover:bg-gray-200">
+                                    ¿Qué Implica? <ArrowCircleRightOutline className="hidden md:block"/>
                                 </a>
                             </Link>
                         </div>
